@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/monda": "^5.0.12",
     "astro": "^4.4.15"
   }
 }
