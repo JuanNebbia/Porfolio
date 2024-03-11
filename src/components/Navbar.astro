@@ -1,28 +1,57 @@
-<nav>
+<script>
+    const navbar = document.getElementById('navbar')
+
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    }
+
+// Añadir event listener al evento scroll del objeto window
+    window.addEventListener("scroll", handleScroll);
+</script>
+
+<nav id="navbar">
     <ul>
-        <li>Sobre Mí</li>
-        <li>Experiencia</li>
-        <li>Proyectos</li>
-        <li>Habilidades</li>
-        <li>Contacto</li>
+        <li><a href="#about">Sobre Mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#contact">Contacto</a></li>
     </ul>
 </nav>
 
 <style>
+    nav{
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+        transition: background-color 1s ease;
+    }
 
+    .scrolled{
+        background-color: #09061Cff;
+    }
 
     ul{
         list-style: none;
         display: flex;
         justify-content: center;
         gap: 2.5rem;
-        font-weight: 400;
-        color: #fff;
         padding: 0;
-        font-size: 1.1rem;
+        margin: 0;
     }
 
     li{
-        text-shadow: 0 1px 5px #09061Caa;
+    }
+
+    li a{
+        text-decoration: none;
+        color: #fff;
+        text-shadow: 0 3px 4px #09061Caa;
+        font-weight: 400;
+        font-size: 1.2rem;
     }
 </style>

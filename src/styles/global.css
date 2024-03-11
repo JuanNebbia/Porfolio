@@ -1,4 +1,16 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #09061C;
     font-family: 'Monda', sans-serif;
+    margin: 0;
+}
+
+h3.section-title{
+    color: #F42BF9;
+    font-size: 2rem;
+    text-align: center;
 }
