@@ -35,10 +35,8 @@ const experiences = [
 ]
 
 const convertDate = (date) => {
-    const month = date.toLocaleString('default', { month: 'short' }); // Obtener el nombre del mes
-    const year = date.getFullYear(); // Obtener el año
-
-    // Formatear la fecha en el formato deseado
+    const month = date.toLocaleString('default', { month: 'short' });
+    const year = date.getFullYear()
     return (month + " " + year)
 }
 ---
@@ -70,7 +68,7 @@ const convertDate = (date) => {
 
 <style>
     section{
-        margin: 4rem 0;
+        margin: 10rem 0;
         padding-top: 4rem;
     }
 

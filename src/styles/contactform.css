@@ -1,0 +1,55 @@
+.contact-form{
+    margin: 5rem auto;
+    min-width: 40rem;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container label{
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.input-container input, .input-container textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 1rem;
+}
+
+.input-container input, .input-container textarea{
+    font-size: 1.2rem;
+    caret-color: #fff;
+    padding: 0.6rem 0.8rem;
+    color: #fff;
+}
+
+.input-container input:focus, .input-container textarea:focus{
+    background-color:  #ffffff09;
+    outline: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: 1px solid #F42BF9;
+}
+
+.submit-btn{
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid #F42BF9;
+    color: #F42BF9;
+    border-radius: 8px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background-color:  #ffffff09;
+}
+
+.sent-tag{
+    color: #3eeb55;
+}

@@ -1,0 +1,116 @@
+---
+import '../styles/global.css'
+
+const certificates = [
+    {
+        title: 'Experiencia',
+        organization: 'NoCountry',
+        link: '#'
+    },
+    {
+        title: 'Programación Backend',
+        organization: 'Coderhouse',
+        link: '#'
+    },
+    {
+        title: 'React.js',
+        organization: 'Coderhouse',
+        link: '#'
+    },
+    {
+        title: '#YoProgramo',
+        organization: 'Argentina Programa',
+        link: '#'
+    },
+    {
+        title: '#SéProgramar',
+        organization: 'Argentina Programa',
+        link: '#'
+    },
+    {
+        title: 'C2 Proficient',
+        organization: 'EF SET',
+        link: '#'
+    }
+]
+---
+
+<section id="certificates">
+    <div class="section-title-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-certificate" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#F42BF9" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5" />
+            <path d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73" />
+            <path d="M6 9l12 0" />
+            <path d="M6 12l3 0" />
+            <path d="M6 15l2 0" />
+          </svg>
+        <h3 class='section-title'>Certificados</h3>
+    </div>
+    <div class="certificates-container">
+        {certificates.map(({ title, organization, link }) => {
+            return(
+                <a href={link} class="certificate-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                        <path d="M7 11l5 5l5 -5" />
+                        <path d="M12 4l0 12" />
+                    </svg>
+                    <div class="certificate-info">
+                        <h5>{title}</h5>
+                        <p>{organization}</p>
+                    </div>
+                </a>
+            )
+        })}
+    </div>
+</section>
+
+<style>
+    section{
+        margin: 10rem 0;
+        padding-top: 4rem;
+    }
+
+    .certificates-container{
+        margin-top: 5rem;
+        color: #fff;
+        display: flex;
+        gap: 4rem;
+        flex-wrap: wrap;
+    }
+
+    .certificate-item{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 1rem;
+        border-radius: 8px;
+
+    }
+
+    .certificate-item:hover{
+        color: #F42BF9;
+        background-color: #ffffff09;
+    }
+
+    .certificate-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    h5{
+        margin: 0;
+        font-size: 1.15rem;
+    }
+
+    .certificate-info p{
+        font-size: 0.8rem;
+        color: #aaa;
+        margin: 0;
+    }
+</style>
