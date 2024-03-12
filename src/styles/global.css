@@ -9,6 +9,10 @@ body{
     margin: 0;
 }
 
+section{
+    padding: 0 20%;
+}
+
 .section-title-container{
     display: flex;
     gap: 1rem;

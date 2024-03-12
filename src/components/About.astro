@@ -5,21 +5,16 @@ import { Image } from "astro:assets"
 <script>
     const bannerContainer = document.getElementById("banner-container")
 
-    // const lightBtn = document.getElementById("light");
-    // lightBtn.addEventListener('click', () => {
-    //     bannerContainer.classList.toggle('transition')
-    // })
-
     const mainBlock = document.querySelector(".main-block-container")
     const profileImg = document.getElementById("profile-img")
     mainBlock.addEventListener('mouseenter', () => {
-        bannerContainer.classList.toggle('transition')
-        profileImg.classList.toggle('grey')
+        bannerContainer.classList.add('transition')
+        profileImg.classList.add('zoom-out')
     })
 
     mainBlock.addEventListener('mouseleave', () => {
-        bannerContainer.classList.toggle('transition')
-        profileImg.classList.toggle('grey')
+        bannerContainer.classList.remove('transition')
+        profileImg.classList.remove('zoom-out')
     })
 </script>
 
@@ -144,12 +139,11 @@ import { Image } from "astro:assets"
         width: 100%;
         object-fit: cover;
         transition: all 1s;
-        filter: saturate(0);
+        filter: saturate(0.9);
         transform: scale(1.4);
     }
 
-    .img-container img.grey{
-        filter: saturate(0.9);
+    .img-container img.zoom-out{
         transform: scale(1);
     }
 
@@ -202,7 +196,7 @@ import { Image } from "astro:assets"
     }
 
     .contact-btn{
-        background-color: #110723aa;
+        background-color: #1F1725;
         border: 1px solid #2c1933;
         border-radius: 6px;
         min-width: 12rem;
@@ -213,7 +207,7 @@ import { Image } from "astro:assets"
     }
 
     .contact-btn:hover{
-        background-color: #1D092F;
+        background-color: #251c2c;
     }
 
     .contact-btn a{
