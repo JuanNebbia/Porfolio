@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@astrojs/react": "^3.1.0",
+    "@fontsource-variable/heebo": "^5.0.20",
+    "@fontsource/bellota-text": "^5.0.19",
     "@fontsource/monda": "^5.0.12",
     "@formspree/react": "^2.5.1",
     "@types/react": "^18.2.65",
