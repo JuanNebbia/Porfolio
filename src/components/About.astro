@@ -1,5 +1,9 @@
 ---
 import { Image } from "astro:assets"
+
+const openToWork = true;
+
+"Provengo del ámbito de la música pero en 2021 comencé mis estudios en desarrollo web. Me formé en frontend, para luego orientarme hacia el área de backend. Las tecnologías que manejo con mayor fluidez son React, Node.js, Express y MongoDB; pero también tengo experiencia en Angular, Astro, Nest y MySQL. He conformado grupos de trabajo para llevar a cabo proyectos colaborativos, donde mejoré mis habilidades blandas. Me entusiasma mucho formar parte de nuevos equipos, y aprender en el proceso"
 ---
 
 <script>
@@ -36,10 +40,13 @@ import { Image } from "astro:assets"
                 </svg>
                 <p class="location">Córdoba, Argentina</p>
             </div>
+            { openToWork &&
+                <p class="open-to-work-badge">Open to work</p>
+            }
         </div>
     </div>
     <div class="description-container">
-        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quas qui corrupti quibusdam excepturi! Hic quam, molestias ducimus at similique officiis non, expedita explicabo, id dolore ratione rerum repellendus corporis cum reprehenderit culpa eligendi. Sapiente, dicta totam accusamus harum, temporibus rerum officia iusto cum id dolor magni est, molestias sunt.</p>
+        <p class="description">Proveniente del mundo de la música, mi pasión por la creatividad me llevó al desarrollo web en 2021. Con habilidades sólidas en React, Node.js, Express y MongoDB, así como experiencia en Angular, Astro, Nest y MySQL, he liderado proyectos colaborativos que han fortalecido mis habilidades técnicas y blandas. Ansioso por unirme a nuevos equipos y continuar aprendiendo en el proceso.</p>
     </div>
     <div class="button-container">
         <button class="contact-btn">
@@ -178,6 +185,17 @@ import { Image } from "astro:assets"
         margin: 4px 6px;
     }
 
+    .open-to-work-badge{
+        color: #0b5a0b;
+        background-color: #9cc49c;
+        text-align: center;
+        width: fit-content;
+        font-weight: 500;
+        font-size: 0.9rem;
+        padding: 3px 3rem;
+        border-radius: 1rem;
+    }
+
     .description-container{
         margin: 3rem auto;
         max-width: 40rem;
@@ -197,18 +215,17 @@ import { Image } from "astro:assets"
     }
 
     .contact-btn{
-        background-color: #1F1725;
-        border: 1px solid #2c1933;
+        background-color: #1F172500;
+        border: 0 solid #2c1933;
         border-radius: 6px;
-        min-width: 12rem;
-        padding: 0;
         font-family: 'Monda', sans-serif;
         height: fit-content;
+        padding: 0;
         /* cursor: pointer; */
     }
 
     .contact-btn:hover{
-        background-color: #251c2c;
+        background-color: #ffffff09;
     }
 
     .contact-btn a{
@@ -222,6 +239,6 @@ import { Image } from "astro:assets"
         gap: 0.75rem;
         justify-content: center;
         font-weight: 700;
-        padding: 5px;
+        padding: 10px 4rem;
     }
 </style>
