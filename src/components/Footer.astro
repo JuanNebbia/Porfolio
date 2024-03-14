@@ -58,4 +58,45 @@
     a:hover{
         color: #b3b3b3;
     }
+
+    @media screen and (max-width: 768px) {
+        footer{
+            justify-content: space-between;
+            padding: 2rem 10% 4rem;
+        }
+
+        a{
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width: 512px) {
+        footer{
+            padding: 2rem 5%;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .social-container{
+            display: flex;   
+            gap: 1rem;
+        }
+
+        .social-title-container{
+            justify-content: center;
+        }
+
+        .social-title-container svg{
+            height: 1rem;
+        }
+
+        h6{
+            font-size: 14px;
+        }
+
+        a{
+            font-size: 12px;
+        }
+    }
 </style>

@@ -1,6 +1,6 @@
 .contact-form{
     margin: 5rem auto;
-    min-width: 40rem;
+    min-width: 38rem;
 }
 
 .input-container{
@@ -52,4 +52,62 @@
 
 .sent-tag{
     color: #3eeb55;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form{
+        margin: 5rem auto;
+        min-width: 20rem;
+    }
+    
+    .input-container label{
+        font-size: 12px;
+    }
+    
+    .input-container input, .input-container textarea{
+        font-size: 1rem;
+        caret-color: #fff;
+        padding: 8px;
+        color: #fff;
+    }
+    
+    .submit-btn{
+        font-size: 1rem;
+        padding: 0.5rem;
+        background-color: transparent;
+        border: 1px solid #F42BF9;
+        color: #F42BF9;
+        border-radius: 8px;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .contact-form{
+        margin: 3rem auto;
+        min-width: 80%;
+    }
+    
+    .input-container label{
+        font-size: 12px;
+    }
+    
+    .input-container input, .input-container textarea{
+        font-size: 1rem;
+        caret-color: #fff;
+        padding: 8px;
+        color: #fff;
+    }
+    
+    .submit-btn{
+        font-size: 1rem;
+        padding: 0.5rem;
+        background-color: transparent;
+        border: 1px solid #F42BF9;
+        color: #F42BF9;
+        border-radius: 8px;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
 }

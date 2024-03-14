@@ -10,7 +10,7 @@ body{
 }
 
 section{
-    padding: 0 20%;
+    padding: 0 15%;
 }
 
 .section-title-container{
@@ -25,4 +25,37 @@ h3.section-title{
     color: #F42BF9;
     font-size: 1.5rem;
     margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    section{
+        padding: 0 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section{
+        padding: 0 6%;
+    }
+
+}
+
+@media screen and (max-width: 512px) {
+    section{
+        padding: 0 8%;
+    }
+
+    .section-title-container{
+        gap: 0.5rem;
+    }
+
+    .section-title-container .icon-tabler{
+        height: 1.6rem;
+        width: 1.6rem;
+    }
+
+    h3.section-title{
+        font-size: 1.25rem;
+    }
+
 }

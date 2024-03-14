@@ -10,21 +10,48 @@
     }
 
     window.addEventListener("scroll", handleScroll);
+
+    const navBar = document.getElementById("navbar")
+
+    window.addEventListener("click", (event)=>{
+        if(event.target.id === "burger-menu-btn"){
+            navBar.classList.toggle('open-menu')
+        }else{
+            navBar.classList.remove('open-menu')
+        }
+    });
+
+    // const burgerMenuBtn = document.getElementById("burger-menu")
+    // burgerMenuBtn.addEventListener("click", ()=> {
+    //     navBar.classList.toggle('open-menu')
+    // })
 </script>
 
 <header>
-    <nav id="navbar">
-        <ul>
-            <li><a href="#about">Sobre Mí</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#experience">Experiencia</a></li>
-            <li><a href="#certificates">Certificados</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
+    <div class="burger-menu" id="burger-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" id="burger-menu-btn" class="icon icon-tabler icon-tabler-menu-2" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a256a3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+        </svg>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#certificates">Certificados</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <style>
+    .burger-menu svg{
+        display: none;
+    }
+
     nav{
         padding: 1rem;
         position: fixed;
@@ -61,4 +88,55 @@
     li a:hover{
         color: #fb7afde8;
     }
+
+    @media screen and (max-width: 768px) {
+        
+        .burger-menu{
+            background-color: #1f1f22;
+            border: 1px solid #a256a3;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 6px;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            z-index: 1000;
+        }
+
+        .burger-menu svg{
+            margin: auto;
+            display: block;
+        }
+
+        nav{
+            display: none;
+            position: fixed;
+            top: 4rem;
+            right: 2rem;
+            width: 80%;
+            background-color: #111114dd;
+            backdrop-filter: blur(10px);
+            border-radius: 9px;
+            border-top-right-radius: 0;
+        }
+
+        nav.open-menu{
+            display: block;
+        }
+
+        .scrolled{
+            background-color: #111114dd;
+        }
+
+        nav ul{
+            display: flex;
+            flex-direction: column;
+        }
+
+        li{
+            text-align: center;
+        }
+    }
+
 </style>

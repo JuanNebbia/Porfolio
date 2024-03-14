@@ -118,4 +118,82 @@ const certificates = [
         color: #aaa;
         margin: 0;
     }
+
+    @media screen and (max-width: 1024px) {
+        section{
+            margin: 10rem 0;
+            padding-top: 4rem;
+        }
+
+        .certificates-container{
+            margin-top: 3rem;
+            gap: 2rem;
+            justify-content: space-evenly;
+        }
+
+        .certificate-item{
+            gap: 1rem;
+            padding: 0.5rem;
+
+        }
+
+        .certificate-item .icon-tabler{
+            height: 2rem;
+        }
+
+        h5{
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        section{
+            margin: 0;
+            padding-top: 0;
+        }
+
+        .certificates-container{
+            margin-top: 3rem;
+            gap: 1rem 2rem;
+            justify-content: space-evenly;
+        }
+
+        .certificate-item{
+            gap: 1rem;
+            padding: 0.5rem;
+            border-radius: 8px;
+            background-color: #ffffff09;
+
+        }
+    }
+
+    @media screen and (max-width: 512px) {
+
+        .certificates-container{
+            margin-top: 3rem;
+            gap: 1rem;
+            justify-content: space-evenly;
+        }
+
+        .certificate-item{
+            gap: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background-color: #ffffff09;
+
+        }
+
+        .certificate-item .icon-tabler{
+            display: none;
+        }
+
+        h5{
+            font-size: 14px;
+        }
+
+        .certificate-info p{
+            font-size: 12px;
+            text-align: center;
+        }
+    }
 </style>

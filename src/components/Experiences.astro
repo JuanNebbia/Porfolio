@@ -5,7 +5,7 @@ const experiences = [
     {
         title: 'Desarrollador Backend',
         organization: 'Programador Promedio',
-        description: 'Dearrollo de aplicación web para proyecto colaborativo en el entorno de las simulaciones de Programador Promedio',
+        description: 'Desarrollo de aplicación web para proyecto colaborativo en el entorno de las simulaciones de Programador Promedio',
         date: [new Date("2024-02-01")]
     },
     {
@@ -50,7 +50,7 @@ const convertDate = (date) => {
             <path d="M12 12l0 .01" />
             <path d="M3 13a20 20 0 0 0 18 0" />
         </svg>
-        <h3 class='section-title'>Experiencias</h3>
+        <h3 class='section-title'>Experiencia</h3>
     </div>
     <div class="experience-container">
         {experiences.map(({ title, organization, description, date }) => {
@@ -104,5 +104,87 @@ const convertDate = (date) => {
         margin: 0;
         width: 70%;
         text-wrap: pretty;
+    }
+
+    @media screen and (max-width: 768px) {
+        section{
+            padding: 4rem 6rem 2rem;
+        }
+
+        .experience-container{
+            margin-top: 5rem;
+            color: #fff;
+        }
+
+        .experience-item{
+            margin-bottom: 3rem;
+        }
+
+        .experience-date{
+            font-size: 12px;
+            margin: 0;
+            font-weight: 400;
+            color: #999;
+        }
+
+        h4{
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        h5{
+            font-size: 1rem;
+            color: #999;
+            margin: 0;
+        }
+
+        .experience-description{
+            font-size: 14px;
+            margin: 0;
+            text-wrap: balance;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 512px) {
+        
+        section{
+            padding: 1rem 2rem;
+        }
+
+        .experience-container{
+            margin-top: 3rem;
+            padding: 0;
+            color: #fff;
+        }
+
+        .experience-item{
+            margin-bottom: 3rem;
+        }
+
+        .experience-date{
+            font-size: 10px;
+            margin: 0;
+            font-weight: 400;
+            color: #999;
+        }
+
+        h4{
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        h5{
+            font-size: 14px;
+            color: #999;
+            margin: 0;
+        }
+
+        .experience-description{
+            font-size: 12px;
+            margin: 0;
+            text-wrap: balance;
+            width: 100%;
+        }
     }
 </style>
