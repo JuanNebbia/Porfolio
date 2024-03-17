@@ -3,9 +3,15 @@ import '../styles/global.css'
 
 const experiences = [
     {
+        title: 'Tutor para diplomatura en programación backend',
+        organization: 'UNTREF',
+        description: 'Acompañamiento pedagógico para estudiantes universitarios en el estudio del desarrollo backend, asistencia en el dictado de clases y corrección de trabajos.',
+        date: [new Date("2024-03-01")]
+    },
+    {
         title: 'Desarrollador Backend',
         organization: 'Programador Promedio',
-        description: 'Desarrollo de aplicación web para proyecto colaborativo en el entorno de las simulaciones de Programador Promedio',
+        description: 'Desarrollo de aplicación web para proyecto colaborativo en el entorno de las simulaciones de Programador Promedio.',
         date: [new Date("2024-02-01")]
     },
     {
@@ -17,25 +23,25 @@ const experiences = [
     {
         title: 'Desarrollador Backend',
         organization: 'NoCountry',
-        description: 'Desarrollo de aplicaciones backend para dos proyectos colaborativos de la simulaciones laborales de NoCountry',
+        description: 'Desarrollo de aplicaciones backend para dos proyectos colaborativos de la simulaciones laborales de NoCountry.',
         date: [new Date("2023-11-01"), new Date("2024-02-01")]
     },
     {
         title: 'Desarrollador Web',
         organization: 'Freelance',
-        description: 'Desarrollo integral de una página web, a modo de portfolio personal del cliente',
+        description: 'Desarrollo integral de una página web, a modo de portfolio personal del cliente.',
         date: [new Date("2023-04-01"), new Date("2024-06-01")]
     },
     {
         title: 'Profesor de guitarra',
         organization: 'Escuela Shinichi Suzuki',
-        description: 'Clases individuales de guitarra para todas las edades, con metodología Suzuki',
+        description: 'Clases individuales de guitarra para todas las edades, con metodología Suzuki.',
         date: [new Date("2022-08-01"), new Date("2023-12-01")]
     }
 ]
 
 const convertDate = (date) => {
-    const month = date.toLocaleString('default', { month: 'short' });
+    const month = date.toLocaleString('default', { month: 'short', timeZone: 'UTC' });
     const year = date.getFullYear()
     return (month + " " + year)
 }
@@ -56,7 +62,7 @@ const convertDate = (date) => {
         {experiences.map(({ title, organization, description, date }) => {
             return(
                 <div class="experience-item">
-                    <p class="experience-date">{convertDate(date[0])}{date.length === 2 ? ` - ${convertDate(date[1])}` : ' - actualidad'}</p>
+                    <p class="experience-date">{convertDate(date[0])} - {date.length === 2 ? `${convertDate(date[1])}` : 'actualidad'}</p>
                     <h4>{title}</h4>
                     <h5>{organization}</h5>
                     <p class="experience-description">{description}</p>
