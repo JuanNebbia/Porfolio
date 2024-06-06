@@ -4,8 +4,16 @@ import '../styles/global.css'
 
 const projects = [
     {
+        title: 'Esteras Perrote',
+        description: 'Sito empresarial para estudio de arquitectura. Este proyecto fue construido en conjunto con Pedro Sota Taier, utilizando lenguaje php para desarrollar un tema personalizado de Wordpress.',
+        date: new Date("2024-05-31"),
+        techs: ['wordpress', 'php'],
+        img: '/images/projects/EsterasPerrote.webp',
+        url: 'https://esterasperrote.com/',
+    },
+    {
         title: 'Refri Manager',
-        description: 'Gestor de stock para heladerías, que permite controlar y crear pedidos. Este ha sido un gran desafío, donde puse en juego mis conocimientos en frontend, backend, bases de datos y diseño. Un proyecto desarollado íntegramente con stack MERN.',
+        description: 'Gestor de stock para heladerías, que permite controlar y crear pedidos. Este ha sido un gran desafío, donde puse en juego mis conocimientos en frontend, backend, bases de datos y diseño. Un proyecto desarrollado íntegramente con stack MERN.',
         date: new Date("2024-02-01"),
         techs: ['react', 'node', 'express', 'mongo'],
         img: '/images/projects/RefriManager.webp',
@@ -67,7 +75,8 @@ const projects = [
         repository: 'https://github.com/JuanNebbia/Porfolio'
     }
 ]
-
+ console.log(projects[0].repository);
+ 
 ---
 
 <section id='projects'>
@@ -86,7 +95,6 @@ const projects = [
                     <p class="project-description">{description}</p>
                     <div class="techs-container">
                         {techs.map(tech => {
-                            // const { icon } = techIcons.find(icon => icon.techName === tech)
                             return (
                                 <Image src={`/images/icons/${tech}.svg`} alt={`${tech} icon`} width={25} height={25}  loading="lazy" title={tech} class='tech-item' />
                                 )
@@ -98,7 +106,7 @@ const projects = [
                         <button class="visit-btn">
                             <a href={url} target="_blank" class="project-link">Visitar</a>
                         </button>
-                        <button class="repository-btn">
+                        <button class={repository ? "repository-btn": "repository-btn disabled"}>
                             <a href={repository} target="_blank" class="repository-link">Repositorio</a>
                         </button>
                     </div>
@@ -207,6 +215,10 @@ const projects = [
         color: transparent;
         z-index: 20;
     }
+
+    .repository-btn.disabled{
+        cursor: not-allowed;
+    }
     
     .project-img-container button a{
         display: flex;
@@ -229,6 +241,11 @@ const projects = [
     .project-img-container:hover>.visit-btn:hover, .project-img-container:hover>.repository-btn:hover{
         backdrop-filter: brightness(0.9) blur(4px) saturate(0.6);
         color: #fff;
+    }
+
+    .project-img-container:hover>.repository-btn.disabled:hover{
+        backdrop-filter: brightness(0.5) blur(4px) saturate(0.5);
+        color: #999;
     }
     
 
