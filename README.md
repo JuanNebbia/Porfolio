@@ -1,7 +1,5 @@
 # Portfolio web | Juan Nebbia
 
-Este es el README de mi Portfolio Web, una aplicación desarrollada en Astro que muestra mi experiencia en el campo del desarrollo web.
-
 ## Descripción
 
 Este Portfolio Web es una aplicación diseñada para mostrar mi experiencia, habilidades y proyectos en el campo del desarrollo web. Utilizando Astro, he creado una interfaz rápida y eficiente para que los visitantes puedan conocer mi trabajo de manera intuitiva.
