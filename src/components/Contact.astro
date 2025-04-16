@@ -1,5 +1,9 @@
 ---
 import ContactFormReact from "./ContactFormReact.jsx";
+
+const lang = Astro.props.lang
+const content = await import(`../content/contact.${lang}.json`);
+
 ---
 
 <section id="contact">
@@ -9,10 +13,10 @@ import ContactFormReact from "./ContactFormReact.jsx";
       <path d="M10 14l11 -11" />
       <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
     </svg>
-    <h3 class='section-title'>Contacto</h3>
+    <h3 class='section-title'>{ content.title }</h3>
   </div>
   <div class="contact-form-container">
-    <ContactFormReact client:load />
+    <ContactFormReact client:load content={content} />
   </div>
   </section>
 

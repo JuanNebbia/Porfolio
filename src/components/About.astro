@@ -2,10 +2,13 @@
 import { Image } from "astro:assets"
 
 const openToWork = true;
+
+const content = await import(`../content/about.${Astro.props.lang}.json`);
+
 const network = {
-    cv: 'https://drive.google.com/file/d/1RL8trHO-DVlbF6HFQGxkfZfIgWTKRL2p/view?usp=sharing',
-    github: 'https://github.com/JuanNebbia',
-    linkedin: 'https://www.linkedin.com/in/juan-nebbia/'
+    cv: content.network.cv,
+    github: content.network.github,
+    linkedin: content.network.linkedin
 }
 ---
 
@@ -36,7 +39,7 @@ const network = {
         <div class="titles-container">
             <h1>Juan F. Nebbia</h1>
             <hr />
-            <h2>Desarrollador web full-stack</h2>
+            <h2>{content.title}</h2>
             <div class="location-container">
                 <svg width="9" height="11" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.0625 0C1.81898 0 0 1.81898 0 4.0625C0 4.94592 0.289622 5.75656 0.771029 6.42044C0.779661 6.43635 0.781016 6.45413 0.790833 6.46936L3.49917 10.5319C3.62477 10.7203 3.83635 10.8333 4.0625 10.8333C4.28865 10.8333 4.50023 10.7203 4.62583 10.5319L7.33417 6.46936C7.34415 6.45413 7.34534 6.43635 7.35397 6.42044C7.83538 5.75656 8.125 4.94592 8.125 4.0625C8.125 1.81898 6.30602 0 4.0625 0ZM4.0625 5.41667C3.31466 5.41667 2.70833 4.81034 2.70833 4.0625C2.70833 3.31466 3.31466 2.70833 4.0625 2.70833C4.81034 2.70833 5.41667 3.31466 5.41667 4.0625C5.41667 4.81034 4.81034 5.41667 4.0625 5.41667Z" fill="white"/>
@@ -49,9 +52,14 @@ const network = {
         </div>
     </div>
     <div class="description-container">
-        <p class="description">Soy desarrollador web full-stack con experiencia en el diseño e implementación de soluciones backend escalables, la construcción de APIs REST y la gestión de bases de datos SQL y NoSQL. Me especializo en Node.js, Express, NestJS y PostgreSQL, aunque también tengo conocimientos en frontend con React, Angular y Astro. Además, tengo experiencia en aseguramiento de calidad, pruebas automatizadas con Cypress y metodologías ágiles como Scrum.</p>
-        <p class="description">He trabajado tanto de manera independiente como en equipos dentro de empresas, participando en el desarrollo y mantenimiento de aplicaciones web. Me gusta formar parte de equipos ágiles y dinámicos, donde puedo aportar soluciones proactivas y contribuir al crecimiento del producto final con código limpio y escalable.</p>
-        <p class="description">Siempre estoy buscando aprender y mejorar, explorando nuevas tecnologías y mejores prácticas para desarrollar software de calidad. 🚀</p>
+        {
+            content.about.map(i => {
+                return (
+                    <p class="description">{i}</p>
+                )
+            })
+            
+        }
     </div>
     <div class="button-container">
         <button class="contact-btn">
@@ -79,9 +87,6 @@ const network = {
                 LinkedIn
             </a>
         </button>
-        <!-- <button class="contact-btn" id="light">
-            Luz
-        </button> -->
     </div>
 </section>
 

@@ -1,3 +1,10 @@
+---
+const lang = Astro.props.lang
+const content = await import(`../content/navbar.${lang}.json`);
+
+---
+
+
 <script>
     const navbar = document.getElementById('navbar')
 
@@ -21,10 +28,6 @@
         }
     });
 
-    // const burgerMenuBtn = document.getElementById("burger-menu")
-    // burgerMenuBtn.addEventListener("click", ()=> {
-    //     navBar.classList.toggle('open-menu')
-    // })
 </script>
 
 <header>
@@ -37,12 +40,20 @@
         </svg>
         <nav id="navbar">
             <ul>
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#certificates">Certificados</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#about">{content.about}</a></li>
+                <li><a href="#projects">{content.projects}</a></li>
+                <li><a href="#experience">{content.experiences}</a></li>
+                <li><a href="#certificates">{content.certificates}</a></li>
+                <li><a href="#contact">{content.contact}</a></li>
             </ul>
+            <div class="lang-container">
+                <a href="/">
+                    <button class={`left ${lang === 'es' ? 'selected' : ''}`}>ES</button>
+                </a> 
+                <a href="/en">
+                    <button class={`right ${lang === 'en' ? 'selected' : ''}`}>EN</button>
+                </a>
+            </div>
         </nav>
     </div>
 </header>
@@ -58,10 +69,53 @@
         width: 100%;
         z-index: 100;
         transition: background-color 1s ease;
+        display: flex;
+        width: 100%;
     }
 
     .scrolled{
         background-color: #18171Eff;
+    }
+
+    .lang-container{
+        margin-right:0 ;
+        width: 85px;
+        margin-left: -85px;
+        color: #fff
+    }
+
+    .lang-container>a{
+        text-decoration: none;
+    }
+
+    .lang-container>a>button:hover{
+        outline: 1px solid #fb7afdaa;
+    }
+
+    .lang-container>a>button{
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-weight: 400;
+        font-size: 12px;
+        outline: 1px solid #fb7afd77;
+        cursor: pointer;
+    }
+
+    .lang-container>a>button.right{
+        padding: 6px 8px 6px 4px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .lang-container>a>button.left{
+        padding: 6px 4px 6px 8px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .lang-container>a>button.selected{
+        background-color: #fb7afd55
     }
 
     ul{
@@ -70,7 +124,7 @@
         justify-content: center;
         gap: 2.5rem;
         padding: 0;
-        margin: 0;
+        margin: 0 auto;
     }
 
     li{

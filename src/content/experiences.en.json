@@ -1,0 +1,35 @@
+{
+    "title": "Experiences",
+    "experiences": [
+        {
+            "title": "Backend developer",
+            "organization": "Outside The Box",
+            "description": "Responsible for designing, implementing, and maintaining efficient and scalable backend services using Node.js, Express, and PostgreSQL technologies. I work with multidisciplinary teams using agile methodologies to integrate solutions that optimize system performance and functionality. I'm also responsible for API integration, database management, and the implementation of microservices-oriented architectures, ensuring high-quality development of innovative products.",
+            "date": ["2023-07-15", "2025-03-31"]
+        },
+        {
+            "title": "Full-stack developer",
+            "organization": "Freelance",
+            "description": "Comprehensive development of web applications for a wide variety of projects and clients, implementing a wide range of technologies, from the frontend to the backend, ensuring the quality and efficiency of the solutions developed.",
+            "date": ["2023-02-01"]
+        },
+        {
+            "title": "Tutor for diplomas in backend programming",
+            "organization": "National University of Tres de Febrero",
+            "description": "Pedagogical support for university students in the study of backend and full-stack programming, assistance in teaching classes, and grading assignments.",
+            "date": ["2024-03-01"]
+        },
+        {
+            "title": "Backend developer",
+            "organization": "Programador Promedio",
+            "description": "Development of a web application for a collaborative project in the Programador Promedio simulation environment.",
+            "date": ["2024-02-01", "2024-04-15"]
+        },
+        {
+            "title": "Backend developer",
+            "organization": "No Country",
+            "description": "Design and development of backend applications for collaborative projects and a hackathon for No Country's work simulations. Collaborative teamwork using agile methodology.",
+            "date": ["2023-11-01", "2024-08-29"]
+        }
+    ]
+}

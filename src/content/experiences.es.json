@@ -1,0 +1,35 @@
+{
+    "title": "Experiencias",
+    "experiences": [
+        {
+            "title": "Desarrollador Backend",
+            "organization": "Outside The Box",
+            "description": " Responsable de diseñar, implementar y mantener servicios backend eficientes y escalables, utilizando tecnologías Node.js, Express y PostgreSQL. Trabajo en colaboración con equipo multidisciplinarios bajo metodologías ágiles para integrar soluciones que optimicen el rendimiento y la funcionalidad del sistema. También me encargo de la integración de APIs, el manejo de bases de datos, y la implementación de arquitecturas orientadas a microservicios, asegurando una alta calidad en el desarrollo de productos innovadores.",
+            "date": ["2023-07-15", "2025-03-31"]
+        },
+        {
+            "title": "Desarrollador Full-stack",
+            "organization": "Freelance",
+            "description": "Desarrollo integral de aplicaciones web para una gran variedad de proyectos y clientes, implementando una amplia gama de tecnologías, desde el frontend hasta el backend, asegurando la calidad y la eficiencia de las soluciones desarrolladas.",
+            "date": ["2023-02-01"]
+        },
+        {
+            "title": "Tutor para diplomaturas en programación backend",
+            "organization": "Universidad Nacional de Tres de Febrero",
+            "description": "Acompañamiento pedagógico para estudiantes universitarios en el estudio de la programación backend y full stack, asistencia en el dictado de clases y corrección de trabajos.",
+            "date": ["2024-03-01"]
+        },
+        {
+            "title": "Desarrollador Backend",
+            "organization": "Programador Promedio",
+            "description": "Desarrollo de aplicación web para proyecto colaborativo en el entorno de las simulaciones de Programador Promedio.",
+            "date": ["2024-02-01", "2024-04-15"]
+        },
+        {
+            "title": "Desarrollador Backend",
+            "organization": "No Country",
+            "description": "Diseño y desarrollo de aplicaciones backend para proyectos colaborativos y una hackatón de la simulaciones laborales de No Country. Trabajo en conjunto en equipos con metodología ágiles.",
+            "date": ["2023-11-01", "2024-08-29"]
+        }
+    ]
+}

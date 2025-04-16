@@ -1,3 +1,8 @@
+---
+const lang = Astro.props.lang
+const content = await import(`../content/about.${lang}.json`);
+---
+
 <footer>
     <div class="social-container">
         <div class="social-title-container">
@@ -6,7 +11,7 @@
             </svg> 
             <h6>LinkedIn</h6>
         </div>
-        <a target="_blank" href="https://www.linkedin.com/in/juan-nebbia/">/in/juan-nebbia</a>
+        <a target="_blank" href={content.network.linkedin}>/in/juan-nebbia</a>
     </div>
     <div class="social-container">
         <div class="social-title-container">
@@ -15,7 +20,7 @@
             </svg>
             <h6>Github</h6>
         </div>
-        <a target="_blank" href="https://github.com/JuanNebbia">/JuanNebbia</a>
+        <a target="_blank" href={content.network.github}>/JuanNebbia</a>
     </div>
     <div class="social-container">
         <div class="social-title-container">

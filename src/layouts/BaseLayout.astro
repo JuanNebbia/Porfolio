@@ -4,6 +4,8 @@ import '@fontsource/bellota-text';
 import '@fontsource-variable/heebo';
 import '../styles/global.css'
 import Navbar from '../components/Navbar.astro'
+
+const lang = Astro.params.lang === 'en' ? 'en' : 'es';
 ---
 
 <html lang="en">
@@ -20,7 +22,7 @@ import Navbar from '../components/Navbar.astro'
     <title>Juan Nebbia | Portfolio</title>
   </head>
   <body>
-    <Navbar />
+    <Navbar lang={lang}/>
     <main>
       <slot />
     </main>

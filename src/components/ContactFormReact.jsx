@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm, ValidationError } from '@formspree/react';
 import '../styles/contactform.css'
 
-export default function Form() {
+export default function Form({ content }) {
   const [state, handleSubmit] = useForm("xoqglpjd");  
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -19,7 +19,7 @@ export default function Form() {
   return (
     <form onSubmit={handleSubmit} className='contact-form' method='post'>      
       <div className="input-container">
-        <label htmlFor='email' className=''>Email</label>
+        <label htmlFor='email' className=''>{ content.labels.email }</label>
         <input
           type='email'
           id='email'
@@ -33,7 +33,7 @@ export default function Form() {
         <ValidationError prefix="Email" field="email" errors={state.errors} />
       </div>
       <div className="input-container">
-        <label htmlFor='subject' className=''>Asunto</label>
+        <label htmlFor='subject' className=''>{ content.labels.subject }</label>
         <input
           type='text'
           id='subject'
@@ -47,7 +47,7 @@ export default function Form() {
         <ValidationError prefix="Subject" field="subject" errors={state.errors} />
       </div>      
       <div className="input-container">
-        <label htmlFor='message' className=''>Mensaje</label>
+        <label htmlFor='message' className=''>{ content.labels.message }</label>
         <textarea
           id='message'
           name='message'
@@ -64,9 +64,9 @@ export default function Form() {
         />
       </div>
     <button type='submit' disabled={state.submitting} className='submit-btn'>
-       {state.submitting ? <span className=""> Enviando... </span> : "Enviar Mensaje"}
+       { state.submitting ? <span className=""> { content.labels.sending } </span> : content.labels.send }
       </button>
-      { state.succeeded && <p className="sent-tag">&#x2714; Mensaje enviado</p> }
+      { state.succeeded && <p className="sent-tag">&#x2714; {content.labels.sent}</p> }
     </form>
   );
 }

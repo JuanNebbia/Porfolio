@@ -1,42 +1,14 @@
 ---
 import '../styles/global.css'
 
-const experiences = [
-    {
-        title: 'Desarrollador Backend',
-        organization: 'Outside The Box',
-        description: ' Responsable de diseñar, implementar y mantener servicios backend eficientes y escalables, utilizando tecnologías Node.js, Express y PostgreSQL. Trabajo en colaboración con equipo multidisciplinarios bajo metodologías ágiles para integrar soluciones que optimicen el rendimiento y la funcionalidad del sistema. También me encargo de la integración de APIs, el manejo de bases de datos, y la implementación de arquitecturas orientadas a microservicios, asegurando una alta calidad en el desarrollo de productos innovadores.',
-        date: [new Date("2023-07-15"), new Date("2025-03-31")]
-    },
-    {
-        title: 'Desarrollador Full-stack',
-        organization: 'Freelance',
-        description: 'Desarrollo integral de aplicaciones web para una gran variedad de proyectos y clientes, implementando una amplia gama de tecnologías, desde el frontend hasta el backend, asegurando la calidad y la eficiencia de las soluciones desarrolladas.',
-        date: [new Date("2023-02-01")]
-    },
-    {
-        title: 'Tutor para diplomaturas en programación backend',
-        organization: 'Universidad Nacional de Tres de Febrero',
-        description: 'Acompañamiento pedagógico para estudiantes universitarios en el estudio de la programación backend y full stack, asistencia en el dictado de clases y corrección de trabajos.',
-        date: [new Date("2024-03-01")]
-    },
-    {
-        title: 'Desarrollador Backend',
-        organization: 'Programador Promedio',
-        description: 'Desarrollo de aplicación web para proyecto colaborativo en el entorno de las simulaciones de Programador Promedio.',
-        date: [new Date("2024-02-01"), new Date("2024-04-15")]
-    },
-    {
-        title: 'Desarrollador Backend',
-        organization: 'No Country',
-        description: 'Diseño y desarrollo de aplicaciones backend para proyectos colaborativos y una hackatón de la simulaciones laborales de No Country. Trabajo en conjunto en equipos con metodología ágiles.',
-        date: [new Date("2023-11-01"), new Date("2024-08-29")]
-    }
-]
+
+const lang = Astro.props.lang
+const content = await import(`../content/experiences.${lang}.json`);
 
 const convertDate = (date) => {
-    const month = date.toLocaleString('default', { month: 'short', timeZone: 'UTC' });
-    const year = date.getFullYear()
+    const dateObject = new Date(date)
+    const month = dateObject.toLocaleString('default', { month: 'short', timeZone: 'UTC' });
+    const year = dateObject.getFullYear()
     return (month + " " + year)
 }
 ---
@@ -50,13 +22,13 @@ const convertDate = (date) => {
             <path d="M12 12l0 .01" />
             <path d="M3 13a20 20 0 0 0 18 0" />
         </svg>
-        <h3 class='section-title'>Experiencia</h3>
+        <h3 class='section-title'>{ content.title }</h3>
     </div>
     <div class="experience-container">
-        {experiences.map(({ title, organization, description, date }) => {
+        {content.experiences.map(({ title, organization, description, date }) => {
             return(
                 <div class="experience-item">
-                    <p class="experience-date">{convertDate(date[0])} - {date.length === 2 ? `${convertDate(date[1])}` : 'actualidad'}</p>
+                    <p class="experience-date">{convertDate(date[0])} - {date.length === 2 ? `${convertDate(date[1])}` : lang === "es" ?'actualidad' : "current"}</p>
                     <h4>{title}</h4>
                     <h5>{organization}</h5>
                     <p class="experience-description">{description}</p>

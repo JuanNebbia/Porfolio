@@ -1,0 +1,80 @@
+{
+    "title": "Projects",
+    "buttons":{
+        "view": "Visit",
+        "repository": "Repository"
+    },
+    "projects":
+        [
+            {
+                "title": "Booboo",
+                "description": "Logistics and transportation web operator where I worked as a backend developer. My responsibilities included API maintenance, code refactoring, architectural design, and performance optimization. I also performed tasks related to testing and quality assurance.",
+                "date": "2024-05-31",
+                "techs": ["node", "express", "postgres", "aws"],
+                "img": "/images/projects/Booboo.webp",
+                "url": "https://booboo.eu/"
+            },
+            {
+                "title": "Esteras Perrote",
+                "description": "Business website for an architectural firm. This project was built using PHP to develop a custom WordPress theme.",
+                "date": "2024-05-31",
+                "techs": ["wordpress", "php"],
+                "img": "/images/projects/EsterasPerrote.webp",
+                "url": "https://esterasperrote.com/"
+            },
+            {
+                "title": "Refri Manager",
+                "description": "Stock manager for ice cream shops, allowing you to control and create orders. This has been a great challenge, putting my knowledge of frontend, backend, databases, and design to work. A project developed entirely with the MERN stack.",
+                "date": "2024-02-01",
+                "techs": ["react", "node", "express", "mongo"],
+                "img": "/images/projects/RefriManager.webp",
+                "url": "https://refri-manager.vercel.app/",
+                "repository": "https://github.com/JuanNebbia/RefriManager"
+            },
+            {
+                "title": "Rastrea Patitas",
+                "description": "A web application that seeks to connect lost pets with their owners. I was a backend developer, using Node.js, Express, and MongoDB. This was my second challenge in the NoCountry simulation environment.",
+                "date": "2024-01-01",
+                "techs": ["react", "node", "express", "mongo"],
+                "img": "/images/projects/RastreaPatitas.webp",
+                "url": "https://rastreapatitas.vercel.app/",
+                "repository": "https://github.com/No-Country/s12-03-m-node-react"
+            },
+            {
+                "title": "ServiciosClub",
+                "description": "Home services market. This project is the result of a group project conducted within the framework of NoCountry's work simulations. In this case, I worked as a backend developer and deepened both my technical and soft skills, including a Scrum-style work methodology.",
+                "date": "2023-12-01",
+                "techs": ["react", "node", "express", "mongo"],
+                "img": "/images/projects/ServiciosClub.webp",
+                "url": "https://www.serviciosclub.com//",
+                "repository": "https://github.com/No-Country/c14-06-m-node-react"
+            },
+            {
+                "title": "Andreassi",
+                "description": "Dynamic portfolio for a design client. This was my first work experience, where I built a fully dynamic web application that allows users to manage their own content.",
+                "date": "2023-07-01",
+                "techs": ["react", "firebase", "bootstrap"],
+                "img": "/images/projects/Andreassi.webp",
+                "url": "https://andreassi.com.ar/",
+                "repository": "https://github.com/JuanNebbia/Andreassi-Porfolio"
+            },
+            {
+                "title": "Matete",
+                "description": "E-commerce for mate equipment. Final training project in Backend Programming. Basic visual design, featuring a solid foundation in API response, security management, design patterns, user sessions, and error handling.",
+                "date": "2023-07-01",
+                "techs": ["node", "express", "mongo", "handlebars"],
+                "img": "/images/projects/Matete.webp",
+                "url": "https://backend-matete.onrender.com/",
+                "repository": "https://github.com/JuanNebbia/Backend_E-commerce"
+            },
+            {
+                "title": "AudioStore",
+                "description": "Virtual marketplace for sound elements. The emphasis of this project is on its visual aspect and user experience.",
+                "date": "2023-06-01",
+                "techs": ["react", "bootstrap", "firebase"],
+                "img": "/images/projects/AudioStore.webp",
+                "url": "https://audio-store-nebbia.vercel.app/",
+                "repository": "https://github.com/JuanNebbia/AudioStore-Nebbia"
+            }
+        ]
+}

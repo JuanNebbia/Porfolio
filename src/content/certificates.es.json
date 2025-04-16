@@ -1,0 +1,55 @@
+{
+    "title": "Cerfiticados",
+    "certificates": [
+        {
+            "title": "NestJs",
+            "organization": "Udemy",
+            "link": "https://www.udemy.com/certificate/UC-459adffc-6400-4052-be1c-6b5b2c98b08e/"
+        },
+        {
+            "title": "Hackatón Por Justina",
+            "organization": "No Country",
+            "link": "https://drive.google.com/file/d/1TeRK9Z8e_bImRjcrz4_Ho5mLhXA4qVZQ/view?usp=sharing"
+        },
+        {
+            "title": "Desarrollo Web (JS/Node.js)",
+            "organization": "Codo a Codo 4.0",
+            "link": "https://drive.google.com/file/d/1yDO_9HO_dqiBMHtnhQqgXnv1kU4v9zN2/view?usp=sharing"
+        },
+        {
+            "title": "Backend Developer",
+            "organization": "Programador Promedio",
+            "link": "https://drive.google.com/file/d/1zSREleA6RgMw8yHQNFl5BR5AI5FpbuZr/view?usp=drive_'link'"
+        },
+        {
+            "title": "Experiencia",
+            "organization": "No Country",
+            "link": "https://drive.google.com/file/d/1iwYSx2ePylUS_umN_TJn9UV0SGSaSbNf/view?usp=sharing"
+        },
+        {
+            "title": "Programación Backend",
+            "organization": "Coderhouse",
+            "link": "https://drive.google.com/file/d/121hY3fZ-tHgCraqF5i0DSrJPdkuYA-nE/view?usp=sharing"
+        },
+        {
+            "title": "React.js",
+            "organization": "Coderhouse",
+            "link": "https://drive.google.com/file/d/1VYQQ3jtWs-rYb5kZpm1ms-MXR3BraG7n/view?usp=sharing"
+        },
+        {
+            "title": "#YoProgramo",
+            "organization": "Argentina Programa",
+            "link": "https://drive.google.com/file/d/1nXIy0FF9YT11vaqxGEOyImg6Zrc1ewZy/view?usp=sharing"
+        },
+        {
+            "title": "#SéProgramar",
+            "organization": "Argentina Programa",
+            "link": "https://drive.google.com/file/d/1indzCf_eESnwH1GwWBWG7dlTqjI2GNnx/view?usp=drive_'link'"
+        },
+        {
+            "title": "C2 Proficient",
+            "organization": "EF SET",
+            "link": "https://cert.efset.org/nbLcBL"
+        }
+    ]
+}

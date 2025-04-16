@@ -1,0 +1,80 @@
+{
+    "title": "Proyectos",
+    "buttons":{
+        "view": "Visitar",
+        "repository": "Repositorio"
+    },
+    "projects":
+        [
+            {
+                "title": "Booboo",
+                "description": "Operador web de logística y transporte donde me desempeñé como backend. Mis tareas incluyeron el mantenimiento de la API, refactorización de código, diseño de arquitectura y optimización de rendimiento. También realicé tareas relacionadas al testing y aseguramiento de la calidad.",
+                "date": "2024-05-31",
+                "techs": ["node", "express", "postgres", "aws"],
+                "img": "/images/projects/Booboo.webp",
+                "url": "https://booboo.eu/"
+            },
+            {
+                "title": "Esteras Perrote",
+                "description": "Sito empresarial para estudio de arquitectura. Este proyecto fue construido utilizando lenguaje php para desarrollar un tema personalizado de Wordpress.",
+                "date": "2024-05-31",
+                "techs": ["wordpress", "php"],
+                "img": "/images/projects/EsterasPerrote.webp",
+                "url": "https://esterasperrote.com/"
+            },
+            {
+                "title": "Refri Manager",
+                "description": "Gestor de stock para heladerías, que permite controlar y crear pedidos. Este ha sido un gran desafío, donde puse en juego mis conocimientos en frontend, backend, bases de datos y diseño. Un proyecto desarrollado íntegramente con stack MERN.",
+                "date": "2024-02-01",
+                "techs": ["react", "node", "express", "mongo"],
+                "img": "/images/projects/RefriManager.webp",
+                "url": "https://refri-manager.vercel.app/",
+                "repository": "https://github.com/JuanNebbia/RefriManager"
+            },
+            {
+                "title": "Rastrea Patitas",
+                "description": "Aplicación web que busca conectar a las mascotas perdidas con sus dueños. Mi función ha sido la de desarrollador backend, con el uso de Node.js, Express y MongoDB. Este fue mi segundo desafío en el entorno de las simulaciones de NoCountry.",
+                "date": "2024-01-01",
+                "techs": ["react", "node", "express", "mongo"],
+                "img": "/images/projects/RastreaPatitas.webp",
+                "url": "https://rastreapatitas.vercel.app/",
+                "repository": "https://github.com/No-Country/s12-03-m-node-react"
+            },
+            {
+                "title": "ServiciosClub",
+                "description": "Mercado de servicios para el hogar. Este proyecto es el resultado de un trabajo grupal, realizado en el marco de las simulaciones laborales de NoCountry. En este caso me desempeñé como desarrollador backend y profundicé tanto en mis habilidades técnicas como en mis habilidades blandas, incluyendo una metodología de trabajo de tipo Scrum.",
+                "date": "2023-12-01",
+                "techs": ["react", "node", "express", "mongo"],
+                "img": "/images/projects/ServiciosClub.webp",
+                "url": "https://www.serviciosclub.com//",
+                "repository": "https://github.com/No-Country/c14-06-m-node-react"
+            },
+            {
+                "title": "Andreassi",
+                "description": "Porfolio dinámico para un cliente del rubro del diseño. Esta fue mi primer experiencia laboral, donde construí una aplicación web totalmente dinámica, que permite al usuario gestionar su propio contenido.",
+                "date": "2023-07-01",
+                "techs": ["react", "firebase", "bootstrap"],
+                "img": "/images/projects/Andreassi.webp",
+                "url": "https://andreassi.com.ar/",
+                "repository": "https://github.com/JuanNebbia/Andreassi-Porfolio"
+            },
+            {
+                "title": "Matete",
+                "description": "E-commerce de equipamiento para mates. Trabajo final de capacitación en Programación Backend. Diseño visual básico, cuenta con una construcción sólida en lo relativo a respuesta de API, manejo de la seguridad, patrones de diseño, sesiones de usuario y control de errores.",
+                "date": "2023-07-01",
+                "techs": ["node", "express", "mongo", "handlebars"],
+                "img": "/images/projects/Matete.webp",
+                "url": "https://backend-matete.onrender.com/",
+                "repository": "https://github.com/JuanNebbia/Backend_E-commerce"
+            },
+            {
+                "title": "AudioStore",
+                "description": "Mercado virtual de elementos sonoros. El énfasis de este proyecto está puesto en su aspecto visual y la experiencia del usuario.",
+                "date": "2023-06-01",
+                "techs": ["react", "bootstrap", "firebase"],
+                "img": "/images/projects/AudioStore.webp",
+                "url": "https://audio-store-nebbia.vercel.app/",
+                "repository": "https://github.com/JuanNebbia/AudioStore-Nebbia"
+            }
+        ]
+}       

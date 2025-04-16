@@ -1,0 +1,11 @@
+{
+    "title": "Contacto",
+    "labels": {
+        "email": "Correo",
+        "subject": "Asunto",
+        "message": "Mensaje",
+        "send": "Enviar Mensaje",
+        "sending": "Enviando...",
+        "sent": "Mensaje enviado"
+    }
+}
