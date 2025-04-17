@@ -2,7 +2,7 @@
 import { getEntry } from "astro:content";
 
 const lang = Astro.props.lang
-const content = (await getEntry('about', lang)).data;
+const content = (await getEntry('hero', lang)).data;
 ---
 
 <footer>

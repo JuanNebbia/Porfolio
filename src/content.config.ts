@@ -5,6 +5,13 @@ const about = defineCollection({
     schema: z.object({
         title: z.string(),
         about: z.array(z.string()),
+    })
+});
+
+const hero = defineCollection({ 
+    type: "data",
+    schema: z.object({
+        title: z.string(),
         network: z.object({
             github: z.string(),
             linkedin: z.string(),
@@ -84,4 +91,4 @@ const contact = defineCollection({
     })
 })
 
-export const collections = { about, projects, navbar, certificates };
+export const collections = { hero, about, projects, navbar, certificates };

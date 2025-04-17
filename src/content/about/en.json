@@ -1,13 +1,8 @@
 {
-    "title": "Full-stack web developer",
+    "title": "About me",
     "about": [
         "I'm a full-stack web developer with experience designing and implementing scalable backend solutions, building REST APIs, and managing SQL and NoSQL databases. I specialize in Node.js, Express, NestJS, and PostgreSQL, although I also have frontend knowledge with React, Angular, and Astro. Additionally, I have experience in quality assurance, automated testing with Cypress, and agile methodologies such as Scrum.",
         "I have worked both independently and in teams within companies, participating in the development and maintenance of web applications. I enjoy being part of agile and dynamic teams, where I can provide proactive solutions and contribute to the growth of the final product with clean and scalable code.",
         "I'm always looking to learn and improve, exploring new technologies and best practices to develop quality software. 🚀"
-    ],
-    "network": {
-        "github": "https://github.com/JuanNebbia",
-        "linkedin": "https://www.linkedin.com/in/juan-nebbia/?locale=en_US",
-        "cv": "https://drive.google.com/file/d/1IAqVklskmyjUzz-47_kr4N4t4TmBexes/view?usp=sharing"
-    }
+    ]
 }

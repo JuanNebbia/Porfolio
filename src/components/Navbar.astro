@@ -35,6 +35,14 @@ const content = (await getEntry('navbar', lang)).data;
 </script>
 
 <header>
+    <div class="lang-container mobile">
+        <a href="/">
+            <button class={`left ${lang === 'es' ? 'selected' : ''}`}>ES</button>
+        </a> 
+        <a href="/en">
+            <button class={`right ${lang === 'en' ? 'selected' : ''}`}>EN</button>
+        </a>
+    </div>
     <div class="burger-menu" id="burger-menu">
         <svg xmlns="http://www.w3.org/2000/svg" id="burger-menu-btn" class="icon icon-tabler icon-tabler-menu-2" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a256a3" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -86,6 +94,13 @@ const content = (await getEntry('navbar', lang)).data;
         width: 85px;
         margin-left: -85px;
         color: #fff
+    }
+    .lang-container.mobile{
+        display: none;
+        position:absolute;
+        margin-left:0;
+        top: 0;
+        left: 0;
     }
 
     .lang-container>a{
@@ -177,6 +192,18 @@ const content = (await getEntry('navbar', lang)).data;
             backdrop-filter: blur(10px);
             border-radius: 9px;
             border-top-right-radius: 0;
+        }
+
+        .lang-container{
+            display: none;
+        }
+
+        .lang-container.mobile{
+            display: block;
+            position:absolute;
+            margin-left:0;
+            top: 1rem;
+            left: 1rem;
         }
 
         nav.open-menu{

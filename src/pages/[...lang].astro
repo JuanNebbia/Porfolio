@@ -6,6 +6,7 @@ import Proyects from '../components/Projects.astro'
 import Certificates from '../components/Certificates.astro'
 import Contact from '../components/Contact.astro'
 import Footer from '../components/Footer.astro'
+import Hero from '../components/Hero.astro'
 
 export async function getStaticPaths() {
   return [
@@ -20,6 +21,7 @@ const lang = Astro.params.lang === 'en' ? 'en' : 'es';
 
 
 <BaseLayout>
+	<Hero lang={lang} />
 	<About lang={lang} />
 	<Experience lang={lang}  />
 	<Proyects lang={lang} />
