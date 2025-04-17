@@ -1,9 +1,12 @@
 ---
 import { Image } from "astro:assets"
+import { getEntry } from "astro:content";
 
 const openToWork = true;
 
-const content = await import(`../content/about.${Astro.props.lang}.json`);
+const lang = Astro.props.lang
+
+const content = (await getEntry('about', lang)).data;
 
 const network = {
     cv: content.network.cv,
@@ -17,14 +20,14 @@ const network = {
 
     const mainBlock = document.querySelector(".main-block-container")
     const profileImg = document.getElementById("profile-img")
-    mainBlock.addEventListener('mouseenter', () => {
-        bannerContainer.classList.add('transition')
-        profileImg.classList.add('zoom-out')
+    mainBlock?.addEventListener('mouseenter', () => {
+        bannerContainer?.classList.add('transition')
+        profileImg?.classList.add('zoom-out')
     })
 
-    mainBlock.addEventListener('mouseleave', () => {
-        bannerContainer.classList.remove('transition')
-        profileImg.classList.remove('zoom-out')
+    mainBlock?.addEventListener('mouseleave', () => {
+        bannerContainer?.classList.remove('transition')
+        profileImg?.classList.remove('zoom-out')
     })
 </script>
 

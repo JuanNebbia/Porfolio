@@ -1,8 +1,9 @@
 ---
+import { getEntry } from 'astro:content';
 import '../styles/global.css'
 
 const lang = Astro.props.lang
-const content = await import(`../content/certificates.${lang}.json`);
+const content = (await getEntry('certificates', lang)).data;
 
 ---
 

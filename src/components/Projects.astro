@@ -1,9 +1,10 @@
 ---
 import { Image } from 'astro:assets'
 import '../styles/global.css'
+import { getEntry } from 'astro:content';
 
 const lang = Astro.props.lang
-const content = await import(`../content/projects.${lang}.json`);
+const content = (await getEntry('projects', lang)).data;
 const projects = content.projects
  
 ---
@@ -50,7 +51,7 @@ const projects = content.projects
 
 <style>
     section{
-        margin: 4rem 0;
+        margin: 5rem 0;
         padding-top: 4rem;
     }
 

@@ -1,8 +1,9 @@
 ---
+import { getEntry } from "astro:content";
 import ContactFormReact from "./ContactFormReact.jsx";
 
 const lang = Astro.props.lang
-const content = await import(`../content/contact.${lang}.json`);
+const content = (await getEntry('contact', lang)).data;
 
 ---
 

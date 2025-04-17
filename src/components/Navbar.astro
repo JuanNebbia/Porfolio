@@ -1,6 +1,10 @@
 ---
+import { getEntry } from "astro:content";
+
+
 const lang = Astro.props.lang
-const content = await import(`../content/navbar.${lang}.json`);
+
+const content = (await getEntry('navbar', lang)).data;
 
 ---
 
@@ -41,8 +45,8 @@ const content = await import(`../content/navbar.${lang}.json`);
         <nav id="navbar">
             <ul>
                 <li><a href="#about">{content.about}</a></li>
-                <li><a href="#projects">{content.projects}</a></li>
                 <li><a href="#experience">{content.experiences}</a></li>
+                <li><a href="#projects">{content.projects}</a></li>
                 <li><a href="#certificates">{content.certificates}</a></li>
                 <li><a href="#contact">{content.contact}</a></li>
             </ul>

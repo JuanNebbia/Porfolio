@@ -1,6 +1,8 @@
 ---
+import { getEntry } from "astro:content";
+
 const lang = Astro.props.lang
-const content = await import(`../content/about.${lang}.json`);
+const content = (await getEntry('about', lang)).data;
 ---
 
 <footer>

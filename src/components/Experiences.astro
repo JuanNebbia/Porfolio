@@ -1,9 +1,10 @@
 ---
+import { getEntry } from 'astro:content';
 import '../styles/global.css'
 
 
 const lang = Astro.props.lang
-const content = await import(`../content/experiences.${lang}.json`);
+const content = (await getEntry('experiences', lang)).data;
 
 const convertDate = (date) => {
     const dateObject = new Date(date)
@@ -40,7 +41,7 @@ const convertDate = (date) => {
 
 <style>
     section{
-        margin: 10rem 0;
+        margin: 1rem 0 5rem;
         padding-top: 4rem;
     }
 
